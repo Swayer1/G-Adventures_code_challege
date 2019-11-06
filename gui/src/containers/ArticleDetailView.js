@@ -54,8 +54,8 @@ class ArticleDetailView extends React.Component {
             type:service.type,
             Name:service.name,
             Location:service.location,
-            check_in:service.accomodation_check_in,
-            check_out:service.accomodation_check_out,
+            check_in:service.accommodation_check_in,
+            check_out:service.accommodation_check_out,
             cost:service.cost,
         }
     ));
@@ -63,7 +63,7 @@ class ArticleDetailView extends React.Component {
         <div>
             <Table columns={columns} dataSource={data} size="middle" />
             <span>
-                <Card title={`Total cost : ${this.state.article.cost}`} bordered={false} style={{ width: 300 }}></Card>                
+                <Card title={`Total cost : ${this.state.article.cost}`} bordered={false} style={{ width: 300 }}></Card>
                 <CustomForm tripID={this.props.match.params.articleID} OldCost={this.state.article.cost}/>
             </span>
         </div>
